@@ -1,0 +1,13 @@
+127.0.0.1 - - [10/Sep/2024:20:03:37 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [10/Sep/2024:20:03:38 +0530] "GET /Website/signin.jsp HTTP/1.1" 200 1106
+0:0:0:0:0:0:0:1 - - [10/Sep/2024:20:03:38 +0530] "GET /Website/CSS/SignIn.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2024:20:03:38 +0530] "GET /favicon.ico HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [10/Sep/2024:20:03:46 +0530] "POST /Website/LoginServlet HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2024:20:03:47 +0530] "GET /Website/home.jsp HTTP/1.1" 200 5988
+0:0:0:0:0:0:0:1 - - [10/Sep/2024:20:03:47 +0530] "GET /Website/CSS/adminHeader.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2024:20:03:47 +0530] "GET /Website/images/product_images/watch.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2024:20:03:47 +0530] "GET /Website/images/product_images/shoes.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2024:20:03:47 +0530] "GET /Website/images/product_images/dress.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2024:20:03:47 +0530] "GET /Website/images/product_images/lcd.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2024:20:03:47 +0530] "GET /Website/images/product_images/mobile.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2024:20:03:47 +0530] "GET /Website/images/product_images/lipstick.jpg HTTP/1.1" 304 -

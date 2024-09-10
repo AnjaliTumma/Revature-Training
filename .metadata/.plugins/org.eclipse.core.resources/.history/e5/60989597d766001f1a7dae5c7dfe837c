@@ -1,0 +1,44 @@
+<%@page import="project.ConnectionProvider"%>
+<%@page import="java.sql.*"%>
+<%@include file="changedetailsheader.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <title>SignUp Page</title>
+        <link rel="stylesheet" type="text/css" href="CSS/changedetails.css">
+</head>
+<body>
+<%
+String name="";
+String password="";
+String mobile="";
+
+try{
+	Connection con=ConnectionProvider.getCon();
+	Statement st=con.createStatement();
+	ResultSet rs=st.executeQuery("Select * from users where email='"+email+"' ");
+	while(rs.next()){
+		
+}
+%>
+	 <div class="mbox">
+            <div class="mbox1">
+               
+                <div class="SignUp">
+                    <h1></h1>
+                    <input type="text" placeholder="Enter Username"> <%=rs.getString(1) %>
+                    <input type="password" placeholder="Enter Password" <%=rs.getString(2) %>>
+                    <input type="text" placeholder="Enter Mobile Number" <%=rs.getString(3) %>>
+                </div>
+            </div>
+        </div>
+ <%
+}catch(Exception e){
+	System.out.println(e);
+}
+ %>
+</body>
+</html>

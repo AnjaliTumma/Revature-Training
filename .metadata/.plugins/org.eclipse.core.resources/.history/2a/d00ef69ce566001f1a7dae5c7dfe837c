@@ -1,0 +1,42 @@
+<%@page import="project.ConnectionProvider"%>
+<%@page import="java.sql.*"%>
+<%@include file="changedetailsheader.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<%
+String msg=request.getParameter("msg");
+if("noMatch".equals(msg)){
+%>
+<body>
+<h3 style="margin-top:10rem;margin-left:30rem;font-size:30px;color:red;">New password and Confirm password does not match!</h3>
+<%} %>
+<%
+if("wrong".equals(msg)){
+%>
+<h3 style="margin-top:1rem;margin-left:30rem;font-size:30px;color:red;">Your old Password is wrong!</h3>
+<%} %>
+<%
+if("done".equals(msg)){
+%>
+<h3 style="margin-top:1rem;margin-left:30rem;font-size:30px;color:red;">Password change successfully</h3>
+<%} %>
+<%
+if("invalid".equals(msg)){
+%>
+<h3 style="margin-top:1rem;margin-left:30rem;font-size:30px;color:red;">Some thing went wrong! Try again!</h3>
+<%} %>
+<form action="" method="post">	
+<h3 style="margin-top:1rem;margin-left:30rem;font-size:30px;color:red;">Enter Old Password</h3>
+<hr>
+<h3 style="margin-top:1rem;margin-left:30rem;font-size:30px;">Enter New Password </h3>
+<hr>
+<h3 style="margin-top:1rem;margin-left:30rem;font-size:30px;">Enter Confirm Password</h3>
+ 
+</body>
+</html>

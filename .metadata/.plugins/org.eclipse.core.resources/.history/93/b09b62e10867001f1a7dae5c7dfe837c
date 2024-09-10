@@ -1,0 +1,11 @@
+<%@page import="project.ConnectionProvider"%>
+<%@page import="java.sql.*"%>
+
+<%
+String email=session.getAttribute("email").toString();
+String subject=request.getParameter("subject");
+String body=request.getParameter("body");
+int check=0;
+try{
+	Connection con=ConnectionProvider.getCon();
+	PreparedStatement st=con.prepareStatement();

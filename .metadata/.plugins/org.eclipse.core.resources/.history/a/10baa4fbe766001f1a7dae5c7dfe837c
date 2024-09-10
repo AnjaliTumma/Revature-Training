@@ -1,0 +1,8 @@
+<%@page import="project.ConnectionProvider"%>
+<%@page import="java.sql.*"%>
+<%
+String email=session.getAttribute("email").toString();
+String oldPassword=request.getParameter("oldPassword");
+String newPassword=request.getParameter("newPassword");
+String confirmPassword=request.getParameter("OldPassword");
+%>

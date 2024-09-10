@@ -1,0 +1,20 @@
+<%@page import="project.ConnectionProvider"%>
+<%@page import="java.sql.*"%>
+
+<%
+String email=session.getAttribute("email").toString();
+String mobilenumber=request.getParameter("mobilenumber");
+
+try{
+	Connection con=ConnectionProvider.getCon();
+	Statement st=con.createStatement();
+	ResultSet rs=st.executeQuery("select * from users where email='"+email+"');
+	 
+	ps.executeUpdate();
+	response.sendRedirect("addChangeAddress.jsp?msg=valid");
+}
+catch(Exception e){
+	System.out.println(e);
+	response.sendRedirect("addChangeAddress.jsp?msg=invalid");
+}
+%> 

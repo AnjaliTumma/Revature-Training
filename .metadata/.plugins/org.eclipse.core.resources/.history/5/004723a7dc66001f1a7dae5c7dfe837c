@@ -1,0 +1,23 @@
+<%@page import="project.ConnectionProvider"%>
+<%@page import="java.sql.*"%>
+<%@include file="changedetailsheader.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3 style="margin-top:10rem;margin-left:30rem;font-size:30px;">New password and Confirm password does not match!</h3>
+<h3 style="margin-top:1rem;margin-left:30rem;font-size:30px;">Your old Password is wrong!</h3>
+<h3 style="margin-top:1rem;margin-left:30rem;font-size:30px;">Password change successfully</h3>
+<h3 style="margin-top:1rem;margin-left:30rem;font-size:30px;">Some thing went wrong! Try again!</h3>
+<h3 style="margin-top:1rem;margin-left:30rem;font-size:30px;">Enter Old Password</h3>
+<hr>
+<h3 style="margin-top:1rem;margin-left:30rem;">Enter New Password </h3>
+<hr>
+<h3 style="margin-top:1rem;margin-left:30rem;">Enter Confirm Password</h3>
+</body>
+</html>

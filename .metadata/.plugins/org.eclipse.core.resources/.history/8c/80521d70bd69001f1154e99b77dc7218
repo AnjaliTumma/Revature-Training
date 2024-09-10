@@ -1,0 +1,66 @@
+package com.revature.servlet;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import project.ConnectionProvider;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+/**
+ * Servlet implementation class ChangeMobileNumberServlet
+ */
+public class ChangeMobileNumberServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public ChangeMobileNumberServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		 HttpSession session = request.getSession();
+		String email=session.getAttribute("email").toString();
+		String mobilenumber=request.getParameter("mobilenumber");
+		String password=request.getParameter("password");
+		int check=0;
+		try{
+			Connection con=ConnectionProvider.getCon();
+			Statement st=con.createStatement();
+			ResultSet rs=st.executeQuery("select * from users where email='"+email+"' and password='"+ password+"' ");
+			while(rs.next()){
+				check=1;
+				st.executeUpdate("update users set mobilenumber='"+mobilenumber+"' where email='"+email+"'");
+				response.sendRedirect("changemobilenumber.jsp?msg=done");
+			}
+			if(check == 0){
+				response.sendRedirect("changemobilenumber.jsp?msg=wrong");
+			}
+		}
+		catch(Exception e){
+			System.out.println(e);
+		}
+	}
+
+}

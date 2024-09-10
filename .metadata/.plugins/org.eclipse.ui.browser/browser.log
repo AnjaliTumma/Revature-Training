@@ -1,0 +1,43 @@
+
+Aug 26, 2024 16:24:38.82 NEW SESSION
+Aug 26, 2024 16:24:38.89 Created TensorFlow Lite XNNPACK delegate for CPU.
+Aug 26, 2024 16:25:11.46 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+
+Aug 30, 2024 15:49:21.42 NEW SESSION
+Aug 30, 2024 15:49:21.44 Created TensorFlow Lite XNNPACK delegate for CPU.
+Aug 30, 2024 15:49:38.47 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+Aug 30, 2024 16:30:33.80 [1728:12568:0830/163033.801:ERROR:interface_endpoint_client.cc(722)] Message 0 rejected by interface blink.mojom.WidgetHost
+Aug 30, 2024 17:04:40.68 [1728:7088:0830/170440.686:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+Aug 30, 2024 17:10:20.04 [1728:7088:0830/171020.047:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+Aug 30, 2024 18:05:43.64 [1728:7088:0830/180543.639:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+Aug 30, 2024 18:05:43.94 [1728:12568:0830/180543.943:ERROR:device_event_log_impl.cc(196)] [18:05:43.941] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Aug 30, 2024 18:05:47.67 [1728:7088:0830/180547.677:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -106
+Aug 30, 2024 18:05:47.69 [1728:12812:0830/180547.695:ERROR:get_updates_processor.cc(265)] PostClientToServerMessage() failed during GetUpdates with error Network error (ERR_INTERNET_DISCONNECTED)
+Aug 30, 2024 18:06:17.78 [1728:7088:0830/180617.784:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+Aug 30, 2024 18:06:19.82 [1728:7088:0830/180619.823:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -106
+Aug 30, 2024 18:06:38.87 [1728:12568:0830/180638.871:ERROR:device_event_log_impl.cc(196)] [18:06:38.871] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Aug 30, 2024 18:33:23.25 [1728:7088:0830/183323.256:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Aug 30, 2024 18:33:25.27 [1728:7088:0830/183325.275:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -106
+Aug 30, 2024 19:02:06.73 [1728:7088:0830/190206.738:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+Aug 30, 2024 19:02:42.64 [1728:7088:0830/190242.644:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+Aug 30, 2024 19:02:43.84 [1728:12568:0830/190243.843:ERROR:device_event_log_impl.cc(196)] [19:02:43.844] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Aug 30, 2024 19:02:44.74 [1728:7088:0830/190244.747:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -106
+Aug 30, 2024 19:05:24.28 [1728:7088:0830/190524.288:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+Aug 30, 2024 19:30:30.64 [1728:12568:0830/193030.640:ERROR:interface_endpoint_client.cc(722)] Message 0 rejected by interface blink.mojom.WidgetHost
+Aug 30, 2024 21:36:34.19 [1728:7088:0830/213634.195:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+Aug 30, 2024 22:10:14.77 [1728:7088:0830/221014.775:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Aug 30, 2024 22:10:22.67 [1728:7088:0830/221022.673:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Aug 30, 2024 22:10:27.75 [1728:7088:0830/221027.752:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Aug 30, 2024 22:10:31.46 [1728:7088:0830/221031.460:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Aug 30, 2024 22:40:06.38 [1728:7088:0830/224006.382:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Aug 30, 2024 22:40:07.71 [1728:12568:0830/224007.712:ERROR:device_event_log_impl.cc(196)] [22:40:07.713] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Aug 30, 2024 22:40:08.74 [1728:7088:0830/224008.743:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -106
+Aug 30, 2024 22:40:15.02 [1728:7088:0830/224015.020:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Aug 30, 2024 22:40:17.76 [1728:7088:0830/224017.769:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Aug 30, 2024 22:40:34.89 [1728:7088:0830/224034.894:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Aug 30, 2024 22:40:43.93 [1728:7088:0830/224043.938:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Aug 30, 2024 22:41:21.31 [1728:7088:0830/224121.318:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Aug 30, 2024 22:41:38.44 [1728:7088:0830/224138.441:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Aug 30, 2024 22:41:47.49 [1728:7088:0830/224147.497:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Aug 30, 2024 22:42:19.90 [1728:7088:0830/224219.899:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Aug 30, 2024 22:43:46.95 [1728:7088:0830/224346.959:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105

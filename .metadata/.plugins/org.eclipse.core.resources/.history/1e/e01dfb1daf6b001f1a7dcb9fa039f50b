@@ -1,0 +1,149 @@
+<%@page import="project.ConnectionProvider"%>
+<%@page import="java.sql.*"%>
+<%@include file="header.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home Page</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+	<link rel="stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    	
+	<style>
+		.container{
+		width:80%;
+		height:300px;
+		display:flex;
+		flex-direction:row;
+		background-color:lightblue;
+		margin:1rem;
+
+		}
+		.container .row{
+		width:30%;
+		height:250px;
+		margint-left:3rem;
+		}
+		.container .row img{
+		width:100%;
+		height:250px;
+		margin:1.3rem 2rem;
+		}
+		.container .col{
+		width:70%;
+		margin-left:0px;
+		height:300px;
+		}
+		.container .col h3{
+			margin-top:2rem;
+			margin-left: 7rem;
+			color:red;
+		}
+		.container .col p{
+			margin-top:1rem;
+			margin-left: 7rem;
+		}
+		.container .col h4,h5{
+			margin-top:1rem;
+			margin-left: 7rem;
+		}
+		.container .btn{
+			width:200px;
+			height:50px;
+			background-color:blue;
+			color:white;
+			font-weigth:599;
+			font-size:17px;
+			margin-top:0.5rem;
+			margin-left: 15rem;
+		}
+	</style>
+	
+</head>
+<body>
+<%	
+String msg=request.getParameter("msg");
+if("added".equals(msg)){
+%>
+    <div class="nbox">
+        <div class="content">
+                <h1 style="text-align:center; color:red; margin-top:4%;">Product Added Successfully</h1>
+                <% } %>
+                <%
+                if("exist".equals(msg)){
+                %>
+                <h1 style="text-align:center; color:red;">Product already exist in your cart! Quantity increased!</h1>
+                <%} %>
+                 <%
+                if("invalid".equals(msg)){
+                %>
+                <h1 style="text-align:center; color:red;">Some thing went wrong! Try Again!</h1>
+                <%} %>
+        </div>
+    
+<div class="title"><br><br>
+	<h1 style="color:red; text-align:center;">Home</h1>
+	
+			<%
+			try{ 
+				Connection con=ConnectionProvider.getCon();
+				Statement st=con.createStatement();
+				ResultSet rs=st.executeQuery("select * from product");
+				while(rs.next())
+				{
+					String imagePath = rs.getString("imagePath");
+	                String imageUrl = request.getContextPath() + "/images/" + imagePath;
+			%>
+				
+			
+
+<div class="container">
+     <%
+     //   int count = 0; // Counter to track the number of products
+     //   while (rs.next()) {
+       //     if (count % 3 == 0) {
+                // Start a new row for every three products
+         //       if (count != 0) {
+           //         out.println("</div>"); // Close the previous row
+             //   }
+               // out.println("<div class='row'>"); // Start a new row
+            //}
+    %>
+            <div class="row">
+			    
+			        <h1 >
+			          <img src="<%=imageUrl%>" alt="Product Image"  />
+			        </h1>
+			      </div>
+			        <div class="col">
+				        <h3><%=rs.getString(2) %></h3>
+				        <p>Timex watches are known for their durability and 
+				        	timeless designs,<br> earning them a positive reputation among users who prioritize value and performance.
+				        </p>
+				        <h4>Category: <%=rs.getString(3) %></h4>
+				        <h5>Price: <%=rs.getString(4) %></h5>
+				        <a href="AddtoCartServlet?id=<%=rs.getString(1) %>"><button class="btn">Add To Cart</button></a>
+			        </div>
+			   </div>
+            </div>
+           </div>
+    <%
+          //  count++; // Increment the product counter
+        //}
+        //if (count > 0) {
+          //  out.println("</div>"); // Close the last row if products were displayed
+        //}
+    %>
+	</div>
+			<%}} 
+				catch(Exception e){
+					System.out.println(e);
+				}%>
+			
+</div>
+</div> 
+</body>
+</html>
